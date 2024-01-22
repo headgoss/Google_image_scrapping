@@ -49,7 +49,7 @@ def play_notification_sound():
 
 
 # Configure WebDriver
-driver_path = "Users/Mathieu/Downloads/chromedriver-win64"  # Replace with the actual path to the downloaded driver
+driver_path = "Users/[your path]/chromedriver-win64"  # Replace with the actual path to the downloaded driver
 
 #La liste de mot clé principale
 list = [ 
@@ -81,7 +81,7 @@ def get_chrome_options():
     options = webdriver.ChromeOptions()
     #options.add_argument("start-maximized")
     options.add_argument("enable-automation")
-    options.add_argument(f'--user-data-dir={"/Users/Mathieu/AppData/Local/Google/Chrome/User Data"}')
+    options.add_argument(f'--user-data-dir={"/Users/[your path]/Local/Google/Chrome/User Data"}')
     #options.add_argument('--incognito')
     options.add_argument("--disable-extensions")
     options.add_argument('--disable-application-cache')
@@ -125,7 +125,7 @@ for model in list:
                 for img in img_results:
                     image_urls.append(img.get_attribute('src'))
 
-                folder_path = '/Users/Mathieu/Documents/Euromillion/Google/Images/' + model  # change your destination path here
+                folder_path = '[Choose a path for your image]' + model  # change your destination path here
                 modified_name = model.replace("+", " ")
 
                 try:
